@@ -1,13 +1,21 @@
 <div class="wrapper">
-<button (click)="getUsers(lblName)">Show All Users</button>
+    <button (click)="getUsers()">Show All Users</button>
 </div>
-<pre #lblName></pre>
+<pre *ngIf="users">{{ users | json }}</pre> 
 
-<!-- <p>users works!</p>
 
+<!-- option 1 -->
+<!--
 <div class="wrapper">
-    <p>users works !</p>   
+    <button (click)="getUsers(lblName)">Show All Users</button>
+</div>
+    <pre #lblName></pre> 
+-->
+
+<!-- option 2 -->
+<!--
+<div class="wrapper"> 
     <button (click)="getUsers(getDocument())">Show All Users</button>
 </div>
-
-<pre id="special"></pre>   -->
+<pre id="special"></pre>  
+ -->

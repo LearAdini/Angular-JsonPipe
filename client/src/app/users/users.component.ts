@@ -8,16 +8,24 @@ import UsersJson from '../../assets/users.json';
 })
 
 export class UsersComponent implements OnInit {
-  getUsers(special:any):void{
-  special.innerText = JSON.stringify(UsersJson).replace(/,|}|{|\\/g, "\n");
-}  
+  users: any;
+
+  getUsers() {
+    this.users = UsersJson;
+  }
 
 constructor() { }
 
 ngOnInit(): void { }
 
-  // getUsers(special:any):void 
-  // {  
+  ///  option 1:
+  //   getUsers(special:any):void{
+  //   special.innerText = JSON.stringify(UsersJson).replace(/,|}|{|\\/g, "\n");
+  // }  
+  ///
+
+  ///  option 2:
+  // getUsers(special:any):void {  
   //   fetch("../../assets/users.json")
   //   .then( data => special.innerText = `All Users:
   //   ${JSON.stringify(UsersJson).replace(/,|}|{|\\/g, "\n")}`, 
@@ -29,4 +37,5 @@ ngOnInit(): void { }
   //   let currentElement = document.querySelector("#special");
   //   return currentElement;
   // }
+  ///
 }
