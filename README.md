@@ -1,13 +1,15 @@
 # Display Json data after button click in Angular
 
-You can either download the source code and run `ng serve` to view the results or you can follow this steps:
+![showAllUsers](https://user-images.githubusercontent.com/80118008/147559232-d889aa07-e2bf-403d-9381-6379e1df4aee.gif)
+
+**You can either download the source code and run `ng serve` to view the results or you can follow this steps:**
 
 
 First create a new Angular app by using `ng new client`.
 
-After packages are installed cd into 'client' and run `ng generate component users`.
+After packages are installed cd into **'client'** and run `ng generate component users`.
 
-After 'users' folder is generate go to **app-routing.module.ts** inside app folder, and add the following lines:
+After **'users'** folder is generate go to **app-routing.module.ts** inside **'app'** folder, and add the following lines:
 
 ```
 import { UsersComponent } from './users/users.component';
@@ -24,7 +26,7 @@ Under **`"compilerOptions": {`** Add these two lines:
     `"resolveJsonModule": true,
     "esModuleInterop": true,`
 
-Now Go to client -> src -> users and open `users.component.ts`:
+Now Go to **client -> src -> users** and open `users.component.ts`:
 
 Add `import UsersJsonn from '../../assets/users.json';`.
 
@@ -50,9 +52,9 @@ Will return any, After fetching the json data I say that the element called 'spe
 
 # getDocument() function
 Will return the selected query selector which is the h4 id called 'special',
+#
 
-
-Now delete all content inside `app.component.html` in 'app' folder, and paste this inside:
+Now delete all content inside `app.component.html` in **'app'** folder, and paste this inside:
 
 ```
 <nav>
@@ -61,7 +63,7 @@ Now delete all content inside `app.component.html` in 'app' folder, and paste th
 <router-outlet></router-outlet>
 ```
 
-Now go to 'users' folder and go to `users.component.html`, and paste this inside:
+Now go to **'users'** folder and go to `users.component.html`, and paste this inside:
 
 ```
     <div class="wrapper">
@@ -107,5 +109,5 @@ button:hover{
 
 Run `ng serve --ssl true --open` and nvaigate to `https://localhost:yourport/users`.
 
-And finally we can click on "Show All Users" to show all json data on screen,the data displayed on the selected element by the query selector in the getDocument function.
+And finally we can click on **"Show All Users"** to show all json data on screen,the data displayed on the selected element by the query selector in the getDocument function.
 
