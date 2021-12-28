@@ -2,7 +2,7 @@
 
 ![showAllUsers](https://user-images.githubusercontent.com/80118008/147559232-d889aa07-e2bf-403d-9381-6379e1df4aee.gif)
 
-You can either download the source code and run `ng serve` to view the results or you can follow this steps:
+**You can either download the source code and run `ng serve` to view the results or you can follow this steps:**
 
 
 First create a new Angular app by using `ng new client`.
