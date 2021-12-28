@@ -120,24 +120,11 @@ Add `import UsersJson from '../../assets/users.json';`.
 And add this inside UsersComponent export class:
 
 ```
-<<<<<<< HEAD
   getUsers():void {
   this.users = UsersJson;
   }
 ```
 # 
-=======
- users: any;
-
- getUsers():void {
-    this.users = UsersJson;
-  } 
-```
-### getUsers() Function
-> Fetching the json data and assign it to -> this.users.
-
-#
->>>>>>> f64bbdc417c59d89eb508bd8461e5c766af3ee52
 
 Now delete all content inside `app.component.html` in **'app'** folder, and paste this inside:
 
@@ -152,7 +139,6 @@ Now go to **'users'** folder and go to `users.component.html`, and paste this in
 
 ```
 <div class="wrapper">
-<<<<<<< HEAD
 <button (click)="getUsers()">Show All Users</button>
 </div>
 
@@ -163,14 +149,6 @@ When button is clicked use getUsers function,
 it will display the Json data from **this.users** on the element **<pre>**
 
 (shortage for pretty / prettier display of data).
-=======
-    <button (click)="getUsers()">Show All Users</button>
-</div>
-
-<pre *ngIf="users">{{ users | json }}</pre> 
-```
-When button is clicked calling getUsers function and 'pre' element will display the users data using JsonPipe.
->>>>>>> f64bbdc417c59d89eb508bd8461e5c766af3ee52
 
 
 Inside `users.component.css` paste this:
