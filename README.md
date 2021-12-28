@@ -144,9 +144,7 @@ Now go to **'users'** folder and go to `users.component.html`, and paste this in
 
 <pre>{{ users | json }}</pre> 
 ```
-When button is clicked use getUsers function,
-
-it will display the Json data from **this.users** on the element **<pre>**
+When button is clicked use getUsers function,it will display the Json data from **this.users** on the element **pre**
 
 (shortage for pretty / prettier display of data).
 
