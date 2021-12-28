@@ -55,10 +55,11 @@ Now delete all content inside `app.component.html` in **'app'** folder, and past
 Now go to **'users'** folder and go to `users.component.html`, and paste this inside:
 
 ```
+<div class="wrapper">
 <button (click)="getUsers(lblName)">Show All Users</button>
+</div>
 
-<pre #lblName>
-</pre>
+<pre #lblName></pre>
 ```
 When button is clicked calling getUsers function with the initial parameter as the 'pre' element and will display the Json data in #lblName.
 
