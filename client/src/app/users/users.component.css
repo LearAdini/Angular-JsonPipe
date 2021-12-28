@@ -20,8 +20,8 @@ button:hover{
     border:1.8px solid rgb(27, 27, 27);
   }
 
-  h4{
+  pre{
       font-family: monospace;
-      font-size:25px;
+      font-size:13px;
       font-weight:bold;
   }
