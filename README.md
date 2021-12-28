@@ -39,9 +39,10 @@ And add inside UsersComponent export class:
     this.users = UsersJson;
   } 
 ```
-# getUsers() Function
-Fetching the json data and assign it to -> this.users.
+### getUsers() Function
+> Fetching the json data and assign it to -> this.users.
 
+#
 
 Now delete all content inside `app.component.html` in **'app'** folder, and paste this inside:
 
@@ -61,7 +62,7 @@ Now go to **'users'** folder and go to `users.component.html`, and paste this in
 
 <pre *ngIf="users">{{ users | json }}</pre> 
 ```
-When button is clicked calling getUsers function and 'pre' element will display the Json data using JsonPipe.
+When button is clicked calling getUsers function and 'pre' element will display the users data using JsonPipe.
 
 
 Inside `users.component.css` paste this:
