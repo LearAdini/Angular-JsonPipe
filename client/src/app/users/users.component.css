@@ -11,6 +11,7 @@ button{
     color:rgb(46, 46, 46);  
     border-radius:5px;
     border:1.8px solid rgb(102, 102, 102);
+    text-align:center;
 }
 button:hover{
     transform:scale(1.1); 

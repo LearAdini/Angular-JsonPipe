@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import UsersJson from '../../assets/users.json';
 
-
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -9,11 +8,13 @@ import UsersJson from '../../assets/users.json';
 })
 
 export class UsersComponent implements OnInit {
-  object: Object = UsersJson;
-  
   getUsers(special:any):void{
   special.innerText = JSON.stringify(UsersJson).replace(/,|}|{|\\/g, "\n");
 }  
+
+constructor() { }
+
+ngOnInit(): void { }
 
   // getUsers(special:any):void 
   // {  
@@ -28,11 +29,4 @@ export class UsersComponent implements OnInit {
   //   let currentElement = document.querySelector("#special");
   //   return currentElement;
   // }
-
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
