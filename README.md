@@ -28,37 +28,26 @@ Under **`"compilerOptions": {`** Add these two lines:
 
 Now Go to **client -> src -> users** and open `users.component.ts`:
 
-Add `import UsersJsonn from '../../assets/users.json';`.
+Add `import UsersJson from '../../assets/users.json';`.
 
 And add inside UsersComponent export class:
 
 ```
-  getUsers(special:any):void 
-  {  
-    fetch("../../assets/users.json")
-    .then( data => special.innerText = `All Users:
-    ${JSON.stringify(UsersJson).replace(/,|}|{|\\/g, "\n")}`, 
-    error => console.log(error))
-    .catch(err =>console.log(err));  
-  }
-
-  getDocument():any{    
-    var currentElement = document.querySelector("#special");
-    return currentElement;
-  }
+getUsers(special:any):void{
+special.innerText = JSON.stringify(UsersJson).replace(/,|}|{|\\/g, "\n");
+}  
 ```
-# getUsers() Function
-Will return any, After fetching the json data I say that the element called 'special' his innerText will include the conversion of the Json file to sting `JSON.stringify(UsersJson)` basicly will parse the json data into string.
+# getUsers(special:any) Function
+The given parameter of the function is 'special' and can be any,So the given parameters innerText will be the json data parsed into string,
 
-# getDocument() function
-Will return the selected query selector which is the h4 id called 'special',
-#
+and repalce each ',' '}' '{' or '\' to within the Json data to \n globaly.
+
 
 Now delete all content inside `app.component.html` in **'app'** folder, and paste this inside:
 
 ```
 <nav>
-  <a routerLink="users"> Users</a>
+<a routerLink="users"> Users</a>
 </nav>
 <router-outlet></router-outlet>
 ```
@@ -66,13 +55,13 @@ Now delete all content inside `app.component.html` in **'app'** folder, and past
 Now go to **'users'** folder and go to `users.component.html`, and paste this inside:
 
 ```
-    <div class="wrapper">
-    <p>users works !</p>   
-    <button (click)="getUsers(getDocument())">Show All Users</button>
-    </div>
-    <h4 id="special"></h4>  
+<div class="wrapper">
+<button (click)="getUsers(lblName)">Show All Users</button>
+</div>
+
+<pre #lblName></pre>
 ```
-When calling in the function inside the button element I pass through getUsers the getDocument function which is providing the element for getUsers return property.
+When button is clicked calling getUsers function with the initial parameter as the 'pre' element and will display the Json data in #lblName.
 
 
 Inside `users.component.css` paste this:
