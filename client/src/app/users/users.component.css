@@ -1,0 +1,27 @@
+.wrapper{
+    text-align:center;
+}
+
+button{
+    transition:transform 0.2s;
+    animation-duration: 1.4s;
+    animation-delay:0.5s;
+    animation-timing-function:ease-in-out;
+    background:rgb(221, 217, 217);
+    color:rgb(46, 46, 46);  
+    border-radius:5px;
+    border:1.8px solid rgb(102, 102, 102);
+}
+button:hover{
+    transform:scale(1.1); 
+    cursor:pointer;   
+    background:rgb(250, 46, 46);
+    color:rgb(221, 217, 217); 
+    border:1.8px solid rgb(27, 27, 27);
+  }
+
+  h4{
+      font-family: monospace;
+      font-size:25px;
+      font-weight:bold;
+  }
