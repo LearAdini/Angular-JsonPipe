@@ -1,4 +1,4 @@
-# Display Json data after button click in Angular
+# Display Json data after button click via Json Pipe in Angular 
 
 ![showAllUsers](https://user-images.githubusercontent.com/80118008/147559232-d889aa07-e2bf-403d-9381-6379e1df4aee.gif)
 
