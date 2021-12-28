@@ -184,4 +184,4 @@ button:hover{
 Run `ng serve --ssl true --open` and nvaigate to `https://localhost:yourport/users`.
 
 
-And finally we can click on **Show All Users** to display all Json data on **<pre>** element.
+And finally we can click on **Show All Users** to display all Json data on the element **pre**.
