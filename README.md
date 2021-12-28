@@ -33,14 +33,14 @@ Add `import UsersJson from '../../assets/users.json';`.
 And add inside UsersComponent export class:
 
 ```
-getUsers(special:any):void{
-special.innerText = JSON.stringify(UsersJson).replace(/,|}|{|\\/g, "\n");
-}  
+ users: any;
+
+ getUsers():void {
+    this.users = UsersJson;
+  } 
 ```
 # getUsers(special:any) Function
-The given parameter of the function is 'special' and can be any,So the given parameters innerText will be the json data parsed into string,
-
-and repalce each ',' '}' '{' or '\' to within the Json data to \n globaly.
+Fetching the json data and assign it to -> this.users.
 
 
 Now delete all content inside `app.component.html` in **'app'** folder, and paste this inside:
@@ -56,12 +56,12 @@ Now go to **'users'** folder and go to `users.component.html`, and paste this in
 
 ```
 <div class="wrapper">
-<button (click)="getUsers(lblName)">Show All Users</button>
+    <button (click)="getUsers()">Show All Users</button>
 </div>
 
-<pre #lblName></pre>
+<pre *ngIf="users">{{ users | json }}</pre> 
 ```
-When button is clicked calling getUsers function with the initial parameter as the 'pre' element and will display the Json data in #lblName.
+When button is clicked calling getUsers function and 'pre' element will display the Json data using JsonPipe.
 
 
 Inside `users.component.css` paste this:
