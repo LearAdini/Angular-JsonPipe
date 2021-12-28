@@ -39,7 +39,7 @@ And add inside UsersComponent export class:
     this.users = UsersJson;
   } 
 ```
-# getUsers(special:any) Function
+# getUsers() Function
 Fetching the json data and assign it to -> this.users.
 
 
